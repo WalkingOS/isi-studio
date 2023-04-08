@@ -4,7 +4,7 @@ export default defineType({
   name: 'category',
   title: 'Category',
   type: 'document',
-  fields: [
+   fields: [
     defineField({
       name: 'title',
       title: 'Title',

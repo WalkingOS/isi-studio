@@ -74,5 +74,10 @@ export default defineType({
     }),*/
   ],
 
-  preview: {},
+  preview: {
+    select: {
+      title: 'title',
+      media: 'mainImage',
+    },
+  },
 })

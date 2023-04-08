@@ -6,31 +6,35 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'name',
-      title: 'Name',
+      name: 'heading',
+      title: 'Titel',
       type: 'string',
     }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'name',
-        maxLength: 96,
-      },
-    }),
-    defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
       name: 'ab',
-      title: 'Ab',
+      title: 'Ab Preis?',
+      initialValue: false,
       type: 'boolean',
+    }),
+    defineField({
+      name: 'price',
+      title: 'Preis',
+      type: 'number',
+    }),
+    defineField({
+      title: 'Vorteile',
+      name: 'services',
+      type: 'array',
+      description: "hier auf Listen was in dem Preis dabei ist oder andere wichtige Informationen",
+      of: [{type: 'string'}]
+    }),
+    defineField({
+      name: 'categories',
+      title: 'Kategorien',
+      type: 'reference',
+      description: "bitte eine Kategorie aussuchen",
+      to: {type: 'category'},
+      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'terminlink',
@@ -51,10 +55,4 @@ export default defineType({
       ]
     }),
   ],
-  preview: {
-    select: {
-      title: 'name',
-      media: 'image',
-    },
-  },
 })

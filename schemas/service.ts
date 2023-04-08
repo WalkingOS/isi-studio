@@ -51,8 +51,9 @@ export default defineType({
     }),
     defineField({
       name: 'body',
-      title: 'Body',
-      type: 'blockContent',
+      title: 'Inahlt',
+      type: 'array',
+      of: [{type:"block"}]
     }),
   ],
 
