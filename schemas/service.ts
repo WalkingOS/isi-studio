@@ -30,10 +30,10 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'preise',
+      name: 'price',
       title: 'Preise',
-      type: 'reference',
-      to: {type: 'price'},
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'price'}}],
     }),
     defineField({
       name: 'mainImage',
