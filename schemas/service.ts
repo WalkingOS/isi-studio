@@ -35,12 +35,6 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'price',
-      title: 'Preise',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'price'}}],
-    }),
-    defineField({
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
