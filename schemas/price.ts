@@ -37,6 +37,14 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'service',
+      title: 'Übergeordneter Service',
+      type: 'reference',
+      description: "bitte übergeordneten Service aussuchen",
+      to: {type: 'service'},
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: 'terminlink',
       title: 'Terminlink',
       type: 'object',
