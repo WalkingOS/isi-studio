@@ -24,6 +24,7 @@ export default defineType({
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
+      description:"wähle ein Bild aus. Wenn leer, dann wird unser Teaser video abgespielt",
       options: {
         hotspot: true,
       },
