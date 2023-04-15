@@ -6,5 +6,6 @@ import settings from './singletons/settings'
 import start from './documents/start'
 import advantage from './advantage'
 
-
 export const schemaTypes = [start, hero, service, price, category, advantage, settings]
+
+export default schemaTypes;
